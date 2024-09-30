@@ -761,21 +761,21 @@ html[lang=ar] .nav-btn.active span:nth-child(2) {
   position: absolute;
   top: 50%;
   width: 40px;
-  height: 2px;
+  height: 4px;
   border-radius: 30px;
   background-color: #892E2A;
 }
 html[lang=en] .main-title.shape::after {
-  right: 0;
-}
-html[lang=ar] .main-title.shape::after {
   left: 0;
 }
+html[lang=ar] .main-title.shape::after {
+  right: 0;
+}
 html[lang=en] .main-title.shape::after {
-  transform: translateX(120%);
+  transform: translate(-120%, -50%);
 }
 html[lang=ar] .main-title.shape::after {
-  transform: translateX(-120%);
+  transform: translate(120%, -50%);
 }
 .main-title.xl {
   font-size: 36px;
@@ -836,6 +836,115 @@ html[lang=ar] .main-title.shape::after {
   object-fit: cover;
   width: 100%;
   max-height: 450px;
+}
+
+.owl-item .item {
+  transform: translate3d(0, 0, 0);
+  margin: 50px 0; /* OVERWRITE PLUGIN MARGIN */
+}
+
+.our-work-slid .owl-item .item img {
+  -webkit-transition: 0.3s;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  object-fit: cover;
+}
+@media (max-width: 576px) {
+  .our-work-slid .owl-item .item img {
+    max-height: 550px;
+    transform: scale(1);
+  }
+}
+
+.our-work-slid .owl-item.center .item img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+@media (max-width: 576px) {
+  .our-work-slid .owl-item.center .item img {
+    max-height: 550px;
+    transform: scale(1);
+  }
+}
+
+.our-work-slid .owl-nav {
+  text-align: center;
+}
+
+.our-work-slid .owl-nav button {
+  font-size: 24px !important;
+  margin: 10px;
+  color: #033aff !important;
+}
+
+.our-work-slid .owl-dots {
+  margin-top: 30px !important;
+}
+.our-work-slid .owl-dots .owl-dot span {
+  width: 80px !important;
+  transition: 0.5s;
+}
+.our-work-slid .owl-dots .owl-dot.active span {
+  background: #892E2A;
+  color: #fff;
+}
+.our-work-slid .owl-dots .owl-dot:hover span {
+  background: #892E2A;
+}
+
+.our_ork_section {
+  position: relative;
+}
+.our_ork_section .right-img, .our_ork_section .left-img {
+  padding: 15px 0;
+  position: absolute;
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+  background-attachment: fixed;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+}
+@media (max-width: 576px) {
+  .our_ork_section .right-img, .our_ork_section .left-img {
+    display: none;
+  }
+}
+html[lang=en] .our_ork_section .img-right {
+  left: 0;
+}
+html[lang=ar] .our_ork_section .img-right {
+  right: 0;
+}
+html[lang=en] .our_ork_section .left-img {
+  right: 0;
+}
+html[lang=ar] .our_ork_section .left-img {
+  left: 0;
+}
+
+.client-slider .item .img-client {
+  max-width: 190px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+@media (max-width: 1280px) {
+  .client-slider .item .img-client {
+    max-width: 150px;
+    max-height: 45px;
+  }
+}
+@media (max-width: 550px) {
+  .client-slider .item .img-client {
+    max-width: 110px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

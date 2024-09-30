@@ -32,6 +32,74 @@ $(window).on("load", function () {
           mirror: false
         });
       }
+      
+    // start to our-work-slid
+  $('.our-work-slid').owlCarousel({
+      items: 3,
+      loop: true,
+      rtl: isRtl,
+      center: true,
+      margin: 30,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 4000,
+      smartSpeed: 1000,
+      dragEndSpeed: 1500,
+      animateOut: 'fadeOut', // تأثير الخفاء عند الخروج
+      animateIn: 'fadeIn',
+      nav: false,
+      dots: true,
+      responsive:{
+          0:{
+              items:1,
+              nav: false,
+              autoplay: true,
+              autoplaySpeed: 3000,
+              autoplayTimeout: 5000,
+              smartSpeed: 2000,
+              dots: false,
+              autoplay: false,
+              center: false
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
+      }
+  })
+
+  // start to client slider
+
+  $(".client-slider").owlCarousel({
+    items: 4,
+    loop: true,
+    rtl: isRtl,
+    margin: 20,
+    nav: false,
+    stagePadding: 0,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    nav: false,
+    responsive: {
+      320: {
+        items: 2,
+      },
+
+      768: {
+        items: 3,
+      },
+
+      1440: {
+        items: 4,
+      },
+    },
+  });
   
   
       // animation aos init
