@@ -40,7 +40,7 @@ $(window).on("load", function () {
       rtl: isRtl,
       center: true,
       margin: 30,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 1000,
       autoplayTimeout: 4000,
       smartSpeed: 1000,
