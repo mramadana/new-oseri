@@ -91,7 +91,7 @@ $(window).on("load", function () {
         items: 2,
       },
 
-      768: {
+      576: {
         items: 3,
       },
 

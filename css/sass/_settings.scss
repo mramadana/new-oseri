@@ -101,5 +101,8 @@ input:focus
 @media(min-width: $screen-xxl) {
     .container {
         max-width: 1418px;
+        &.lg {
+            max-width: 1550px;
+        }
     }
 }
