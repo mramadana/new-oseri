@@ -886,10 +886,10 @@ html[lang=ar] .main-title.shape::after {
   max-height: 450px;
 }
 
-.owl-item .item {
+.our-work-slid .owl-item .item {
   transform: translate3d(0, 0, 0);
   display: block;
-  margin: 50px 0; /* OVERWRITE PLUGIN MARGIN */
+  margin: 50px 0;
 }
 
 .our-work-slid .owl-item .item img {
@@ -979,21 +979,15 @@ html[lang=ar] .our_ork_section .left-img {
   left: 0;
 }
 
-.client-slider .item .img-client {
-  max-width: 190px;
-  object-fit: cover;
-  margin: 0 auto;
+.client-slider .item {
+  width: 80px;
+  height: 120px;
 }
-@media (max-width: 1280px) {
-  .client-slider .item .img-client {
-    max-width: 150px;
-    max-height: 45px;
-  }
-}
-@media (max-width: 550px) {
-  .client-slider .item .img-client {
-    max-width: 110px;
-  }
+.client-slider .item img {
+  max-width: 100%;
+  height: 100% !important;
+  height: auto;
+  object-fit: contain;
 }
 
 .main-cl {
@@ -1430,22 +1424,23 @@ html[lang=ar] .sticky-icon a {
 
 .whatsapp-icon {
   position: fixed;
-  bottom: 20px;
+  bottom: 35px;
   z-index: 9999;
   text-align: center;
   cursor: pointer;
   border: 0;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
+  width: 85px;
+  height: 85px;
+  padding: 15px;
   border-radius: 50%;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 3px rgba(14, 14, 14, 0.5);
+  box-shadow: 0 0 0 0 rgba(37, 212, 100, 0.6), 0 0 0 0 #25d464;
+  animation: shadow 1.4s ease-out infinite;
 }
 html[lang=en] .whatsapp-icon {
   left: 40px;
@@ -1453,13 +1448,22 @@ html[lang=en] .whatsapp-icon {
 html[lang=ar] .whatsapp-icon {
   right: 40px;
 }
-.whatsapp-icon:hover {
-  transform: rotate(360deg) scale(1.2);
-}
 .whatsapp-icon img {
   width: 100%;
   height: 100%;
   transition: 0.5s;
+}
+.whatsapp-icon:hover {
+  transform: scale(1.2);
+}
+.whatsapp-icon:hover img {
+  transform: rotate(360deg);
+}
+
+@keyframes shadow {
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 102, 0, 0), 0 0 0 20px rgba(255, 102, 0, 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
